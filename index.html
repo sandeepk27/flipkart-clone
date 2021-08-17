@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="icon" href="https://cdn.icon-icons.com/icons2/729/PNG/512/flipkart_icon-icons.com_62718.png" type="image/x-icon">
+   <title>flipkart Clone</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+   <!----------------------------------Navbar------------------------------------------------->
+   <div class="bg-primary">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">
+               <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdd-qzkVUo0dBoxPSfHqX6f1uOkJfLOcKdExSY-s0PiK3Ox3DY"
+                  class="flipkartImg" alt="flip">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <div class="input-group">
+                  <input type="text" class="form-control rounded-0" placeholder="Search for products,brands and more..."
+                     aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                     <span class="input-group-text text-primary bg-white rounded-0" id="basic-addon2"><i
+                           class="fas fa-search"></i></span>
+                  </div>
+               </div>
+
+               <ul class="navbar-nav mr-auto ml-3">
+                  <li class="nav-item">
+                     <!-- <a class="nav-link text-white ml-5" href="#">More</a> -->
+                     <p id="dispUser" class="text-white mt-2 font-weight-bold"></p>
+                  </li>
+                  <div id="hidelogin">
+                     <li class="nav-item active mt-1">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn px-4 ml-3 text-primary bg-light py-1 rounded-0"
+                           data-toggle="modal" data-target="#exampleModalCenter">
+                           <b>Login</b></button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title text-primary" id="exampleModalLongTitle">Login Page</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="form-group h5">
+                                       <label for="username">Username</label>
+                                       <input type="text" class="form-control" id="username"
+                                          placeholder="Enter the Username">
+                                    </div>
+                                    <div class="form-group h5">
+                                       <label for="pwd">Password</label>
+                                       <input type="password" class="form-control" id="pwd"
+                                          placeholder="Enter the Password">
+                                    </div>
+                                    <div class="text-center">
+                                       <button type="submit" id="loginButton"
+                                          class="btn btn-primary btn-lg">Submit</button>
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer justify-content-center">
+                                    <a href="Registration.html"><small class="text-center">New to Flipkart ? Create an
+                                          account</small> </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </div>
+
+                  <li class="nav-item">
+                     <a class="nav-link text-white pl-5" href="#">More</a>
+                  </li>
+                  <li class="nav-item  mt-2">
+                     <a href="#"><small class="text-white h5 d-flex pl-4"><i class="fas fa-shopping-cart"></i>
+                           <span class="px-2">cart</span></small></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <!----------------------------------Components--------------------------------------------->
+   <div class="container-fluid">
+      <div class="mt-1 p-0">
+         <ul class="nav justify-content-center text-dark">
+            <li class="nav-item  dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Electronics
+                  <span class="small text-muted"><i class="fas fa-angle-down"></i></span>
+               </a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Mobile"> <small
+                           class="text-dark font-weight-bold">Mobile</small></a><br>
+                     <a href="#"><small class="text-muted"> Mi</small></a><br>
+                     <a href="#"><small class="text-muted">Realme</small></a><br>
+                     <a href="#"><small class="text-muted">Samsung</small></a><br>
+                     <a href="#"><small class="text-muted">Infinix</small> </a><br>
+                     <a href="#"><small class="text-muted">OPPO</small></a><br>
+                     <a href="#"><small class="text-muted">Apple</small></a><br>
+                     <a href="#"><small class="text-muted">Vivo</small></a><br>
+                     <a href="#"><small class="text-muted">Honor</small></a><br>
+                     <a href="#"><small class="text-muted">Asus</small></a><br>
+                     <a href="#"><small class="text-muted">realme 5i</small></a><br>
+                     <a href="#"><small class="text-muted">Samsung S10 Lite</small></a><br>
+                     <a href="#"><small class="text-muted">Redmi 8A</small></a><br>
+                     <a href="#"><small class="text-muted">Redmi 8</small></a><br>
+                     <a href="#"><small class="text-muted">OPPO F15</small></a><br>
+                     <a href="#"><small class="text-muted">Asus ROG Ohone II</small></a>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Speakers"> <small
+                           class="text-dark font-weight-bold">Speakers</small></a><br>
+                     <a href="#"><small class="text-muted">Home Audio Speakers</small></a><br>
+                     <a href="#"><small class="text-muted">Home Theatres</small></a><br>
+                     <a href="#"><small class="text-muted">Soundbars</small></a><br>
+                     <a href="#"><small class="text-muted">Bluetooth Speakers</small></a><br>
+                     <a href="#"><small class="text-muted">DTH Set Top Box</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Laptops"><small
+                           class="text-dark font-weight-bold">Laptops</small></a><br>
+                     <a href="#"><small class="text-muted">HP</small></a><br>
+                     <a href="#"> <small class="text-muted">Dell</small></a><br>
+                     <a href="#"> <small class="text-muted">Acer</small></a><br>
+                     <a href="#"><small class="text-muted">Asus</small> </a><br>
+                     <a href="#"> <small class="text-muted">Lenovo</small> </a><br>
+                     <a href="#"><small class="text-muted"> Thoshiba</small></a><br>
+                     <a href="#"> <small class="text-muted">Mac Book</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Tvs &
+                  Appliances <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Televisions"> <small
+                           class="text-dark font-weight-bold">Televisions</small></a><br>
+                     <a href="#"><small class="text-muted">Mi</small></a><br>
+                     <a href="#"><small class="text-muted">Vu</small></a><br>
+                     <a href="#"><small class="text-muted">Thompson</small></a><br>
+                     <a href="#"><small class="text-muted">Samsung</small></a><br>
+                     <a href="#"><small class="text-muted">LG</small></a><br>
+                     <a href="#"><small class="text-muted">BPL</small></a><br>
+                     <a href="#"><small class="text-muted">Mororola</small></a></br>
+                     <small class="font-weight-bold">Shop by Screen Size</small><br>
+                     <a href="#"> <small class="text-muted">24 & below</small></a><br>
+                     <a href="#"><small class="text-muted">28 - 32</small></a><br>
+                     <a href="#"><small class="text-muted">39 - 43</small></a><br>
+                     <a href="#"><small class="text-muted">28 - 55</small></a><br>
+                     <a href="#"><small class="text-muted">60 & above</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Air Conditions"> <small class="text-dark font-weight-bold">Air
+                           conditions</small></a><br>
+                     <a href="#"><small class="text-muted">Inverter AC</small></a><br>
+                     <a href="#"><small class="text-muted">Split AC</small></a><br>
+                     <a href="#"><small class="text-muted">Window AC</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Washing Machines"><small class="text-dark font-weight-bold">Washing
+                           Machines</small></a><br>
+                     <a href="#"><small class="text-muted">Fully Automatic Front Load</small></a><br>
+                     <a href="#"><small class="text-muted">Semi Automatic Top Load</small></a><br>
+                     <a href="#"><small class="text-muted">Fully Automatic Top Load</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Men <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=FootWear"> <small
+                           class="text-dark font-weight-bold">FootWear</small></a><br>
+                     <a href="#"><small class="text-muted">Sport Shoes</small></a><br>
+                     <a href="#"><small class="text-muted">Causal Shoes</small></a><br>
+                     <a href="#"><small class="text-muted">Formal Shoes</small></a><br>
+                     <a href="#"><small class="text-muted">Sandals & Floaters</small></a><br>
+                     <a href="#"><small class="text-muted">Flip-Flops</small></a><br>
+                     <a href="#"><small class="text-muted">Loafers</small></a><br>
+                     <a href="#"><small class="text-muted">Boots</small></a></br>
+                     <a href="#"><small class="text-muted">Running Shoes</small></a><br>
+                     <a href="#"><small class="text-muted">Sneakers</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Clothing"> <small
+                           class="text-dark font-weight-bold">Clothing</small></a><br>
+                     <small class="font-weight-bold">Top Wear</small><br>
+                     <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Kurtas</small></a><br>
+                     <a href="#"><small class="text-muted">Suits</small></a><br>
+                     <a href="#"><small class="text-muted">Blazers</small></a><br>
+                     <small class="font-weight-bold">Bottom Wear</small><br>
+                     <a href="#"><small class="text-muted">Jeans</small></a><br>
+                     <a href="#"><small class="text-muted">Trousers</small></a><br>
+                     <a href="#"><small class="text-muted">Cargos</small></a><br>
+                     <a href="#"><small class="text-muted">Track Pants</small></a><br>
+                     <a href="#"><small class="text-muted">Shorts</small></a><br>
+                     <a href="#"><small class="text-dark font-weight-bold">Ties,Socks & more</small></a><br>
+                     <a href="#"><small class="text-dark font-weight-bold">Kurta,Pyjama & more</small></a><br>
+                     <a href="#"><small class="text-dark font-weight-bold">Fabrics</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Grooming"><small class="text-dark font-weight-bold">
+                           Grooming</small></a><br>
+                     <a href="#"><small class="text-muted">BackPack</small></a><br>
+                     <a href="#"><small class="text-muted">Wallets</small></a><br>
+                     <a href="#"><small class="text-muted">Belts</small></a><br>
+                     <a href="#"><small class="text-muted">Sunglasses</small></a><br>
+                     <a href="#"><small class="text-muted">Frames</small></a><br>
+                     <a href="#"><small class="text-muted">Trimmers</small></a><br>
+                     <a href="#"><small class="text-muted">Shavers</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Women <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Sandals"> <small
+                           class="text-dark font-weight-bold">Sandals</small></a><br>
+                     <a href="#"><small class="text-muted">Flats</small></a><br>
+                     <a href="#"><small class="text-muted">Heels</small></a><br>
+                     <a href="#"><small class="text-muted">Wedges</small></a><br>
+                     <small class="text-dark font-weight-bold">Shoes</small><br>
+                     <a href="#"><small class="text-muted">Sandals & Floaters</small></a><br>
+                     <a href="#"><small class="text-muted">Flip-Flops</small></a><br>
+                     <a href="#"><small class="text-muted">Loafers</small></a><br>
+                     <a href="#"><small class="text-muted">Boots</small></a></br>
+                     <a href="#"><small class="text-muted">Running Shoes</small></a><br>
+                     <a href="#"><small class="text-muted">Sneakers</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Accessories"> <small
+                           class="text-dark font-weight-bold">Accessories</small></a><br>
+                     <a href="#"><small class="text-muted">Handbags</small></a><br>
+                     <a href="#"><small class="text-muted">Shoulder bags</small></a><br>
+                     <a href="#"><small class="text-muted">Totes</small></a></br>
+                     <a href="#"><small class="text-muted">Sling bags</small></a><br>
+                     <a href="#"><small class="text-muted">Clutches</small></a><br>
+                     <a href="#"><small class="text-muted">Wallets</small></a><br>
+                     <a href="#"><small class="text-muted">Sunglases</small></a></br>
+                     <a href="#"><small class="text-muted">Frames</small></a><br>
+                     <a href="#"><small class="text-muted">Belts</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Party Wear"><small
+                           class="text-dark font-weight-bold">Clothing</small></a><br>
+                     <a href="#"><small class="text-muted">Swetters</small></a><br>
+                     <a href="#"><small class="text-muted">Pull overs</small></a><br>
+                     <a href="#"><small class="text-muted">SweatShirts</small></a></br>
+                     <a href="#"><small class="text-muted">Jackets</small></a><br>
+                     <a href="#"><small class="text-muted">Cardigans</small></a><br>
+                     <a href="#"><small class="text-muted">Shrings</small></a><br>
+                     <a href="#"><small class="text-muted">Coat</small></a></br>
+                     <a href="#"><small class="text-muted">Blazzers</small></a><br>
+                     <small class="font-weight-bold">Winter Wear</small><br>
+                     <a href="#"><small class="text-muted">Jeans</small></a><br>
+                     <a href="#"><small class="text-muted">Cardigans</small></a><br>
+                     <a href="#"><small class="text-muted">Shrings</small></a><br>
+                     <a href="#"><small class="text-muted">Coat</small></a></br>
+                     <a href="#"><small class="text-muted">Blazzers</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Baby &
+                  kids <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Kid's Clothing"> <small class="text-dark font-weight-bold">Kid's
+                           Clothing</small></a><br>
+                     <small class="font-weight-bold">Boy's Clothing</small><br>
+                     <a href="#"><small class="text-muted">Polo's & T-shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Ethnic wear</small></a><br>
+                     <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Shorts</small></a></br>
+                     <a href="#"><small class="text-muted">3/4 ths</small></a><br>
+                     <small class="font-weight-bold">Girl's Clothing</small><br>
+                     <a href="#"><small class="text-muted">Polo's & T-shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Ethnic wear</small></a><br>
+                     <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                     <a href="#"><small class="text-muted">Shorts</small></a></br>
+                     <a href="#"><small class="text-muted">3/4 ths</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Baby care"> <small class="text-dark font-weight-bold">Baby
+                           care</small></a><br>
+                     <a href="#"><small class="text-muted">Diapers</small></a><br>
+                     <a href="#"><small class="text-muted">Wipes</small></a><br>
+                     <a href="#"><small class="text-muted">Baby Grooming</small></a><br>
+                     <a href="#"><small class="text-muted">Baby Food</small></a></br>
+                     <a href="#"><small class="text-muted">Baby Bedding</small></a><br>
+                     <a href="#"><small class="text-muted">Baby proofing</small></a><br>
+                     <a href="#"><small class="text-muted">Baby Powder</small></a><br>
+                     <a href="#"><small class="text-muted">Baby Soaps</small></a><br>
+                     <a href="#"><small class="text-muted">Baby oral care</small></a></br>
+                     <a href="#"><small class="text-muted">Feeding Bottle</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Toys"><small class="text-dark font-weight-bold">Toys</small></a><br>
+                     <a href="#"><small class="text-muted">Remote control toys</small></a><br>
+                     <a href="#"><small class="text-muted">Eductional toys</small></a><br>
+                     <a href="#"><small class="text-muted">Soft toys</small></a></br>
+                     <a href="#"><small class="text-muted">Outdoor Toys</small></a><br>
+                     <a href="#"><small class="text-muted">Puzzles</small></a><br>
+                     <a href="#"><small class="text-muted">Toy Guns</small></a><br>
+                     <a href="#"><small class="text-muted">Perty Supplies</small></a><br>
+                     <a href="#"><small class="text-muted">Drones</small></a></br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Home &
+                  Furniture <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Bed Room Furniture"> <small class="text-dark font-weight-bold">Bed
+                           Room Furniture</small></a><br>
+                     <a href="#"><small class="text-muted">Beds</small></a><br>
+                     <a href="#"><small class="text-muted">Mattresses</small></a><br>
+                     <a href="#"><small class="text-muted">Wardrobes</small></a><br>
+                     <small class="font-weight-bold">Furnishing</small><br>
+                     <a href="#"><small class="text-muted">Bedsheets</small></a></br>
+                     <a href="#"><small class="text-muted">Curtains</small></a><br>
+                     <a href="#"><small class="text-muted">Blankets</small></a><br>
+                     <a href="#"><small class="text-muted">Bath Towels</small></a><br>
+                     <a href="#"><small class="text-muted">Floor Coverings</small></a><br>
+                     <a href="#"><small class="text-muted">Bath Towels</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Living Room Furniture"> <small
+                           class="text-dark font-weight-bold">Living
+                           Room Furniture</small></a><br>
+                     <a href="#"><small class="text-muted">Sofa</small></a></br>
+                     <a href="#"><small class="text-muted">Sofa Beds</small></a><br>
+                     <a href="#"><small class="text-muted">TV Units</small></a><br>
+                     <a href="#"><small class="text-muted">Coffee Tables</small></a><br>
+                     <a href="#"><small class="text-muted">Shoe Racks</small></a><br>
+                     <a href="#"><small class="text-muted">Dining Tables</small></a><br>
+                     <a href="#"><small class="text-muted">Dining Chairs</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Sports,
+                  Books & More <span class="small text-muted"><i class="fas fa-angle-down"></i></span></a>
+               <div class="dropdown-content p-0">
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Books"> <small
+                           class="text-dark font-weight-bold">Books</small></a><br>
+                     <a href="#"><small class="text-muted">Entrance Exams</small></a></br>
+                     <a href="#"><small class="text-muted">Academics</small></a><br>
+                     <a href="#"><small class="text-muted">Literature</small></a><br>
+                     <a href="#"><small class="text-muted">Fiction</small></a><br>
+                     <a href="#"><small class="text-muted">Non Fiction</small></a><br>
+                     <a href="#"><small class="text-muted">Young Readers</small></a><br>
+                     <a href="#"><small class="text-muted">Self-Help</small></a><br>
+                     <a href="#"><small class="text-muted">Business</small></a><br>
+                     <a href="#"><small class="text-muted">Preorders</small></a><br>
+                     <a href="#"><small class="text-muted">Languages</small></a><br>
+                  </span>
+                  <span class="float-left px-4">
+                     <a href="loaddata.html?product=Sports"> <small
+                           class="text-dark font-weight-bold">Sports</small></a><br>
+                     <a href="#"><small class="text-muted">Cricket</small></a><br>
+                     <a href="#"><small class="text-muted">Badminton</small></a><br>
+                     <a href="#"><small class="text-muted">Cycling</small></a><br>
+                     <a href="#"><small class="text-muted">Football</small></a><br>
+                     <a href="#"><small class="text-muted">Skating</small></a><br>
+                     <a href="#"><small class="text-muted">Camping</small></a><br>
+                     <a href="#"><small class="text-muted">Hiking</small></a><br>
+                     <a href="#"><small class="text-muted">Swimming</small></a><br>
+                  </span>
+               </div>
+            </li>
+            <li class="nav-item">
+               <a href="addproducts.html" class="nav-link text-dark font-weight-bold">Add
+                  Product <span> <i class="fas fa-plus-circle"></i></span></a>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <hr>
+
+   <!----------------------------------Corousel---------------------------------------------->
+   <div class="container-fluid px-10">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/1688/280/image/978c3f924fb795af.jpg?q=50" alt="First slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/1688/280/image/a16c0a32bd834501.jpg?q=50" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/1688/280/image/fc0fa2239d91db09.jpg?q=50" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/1688/280/image/c0c87d7b81ea45c3.jpg?q=50" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/1688/280/image/55b9b02b1222cfc8.jpg?q=50" alt="Fifth slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/3376/560/image/a202fb36f2ed03de.jpg?q=50 " alt="Sixth slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100"
+                  src="https://rukminim1.flixcart.com/flap/3376/560/image/de3e826deb18f627.jpg?q=50  "
+                  alt="Sixth slide">
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+         </a>
+      </div>
+   </div>
+
+   <!----------------------------------Deal of the day--------------------------------------->
+   <div class="container-fluid px-5">
+      <div class="row my-3 text-center">
+         <div class="col-md-10">
+            <div class="card">
+               <div class="card-header d-flex">
+                  <h4>Deals of the Day</h4>
+                  <span class="btn btn-primary rounded-0 text-light ml-auto"><small>VIEW ALL</small></span>
+               </div>
+               <div class="card-body mb-2">
+                  <div class="row my-3">
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k48rwcw0/suitcase/z/4/g/harboursm4wnre-harboursm4wnre-check-in-luggage-safari-26-original-imafn6wrqgd8yzkg.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Top Deals</span><br>
+                        <span class="text-success ">Up to 70% off</span><br>
+                        <span class="text-muted">Trollys,Wallets..</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jdlzfrk0/valentine-gift-set/j/g/t/valentine-day-gifts-for-lover-girlfriend-boyfriend-wife-birthday-original-imaf2hq36gvype4a.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Valentine gift sets</span><br>
+                        <span class="text-success p-0">From <i class="fas fa-rupee-sign"></i> 79</span><br>
+                        <span class="text-muted">Flipkart Perfect</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/shoe/k/m/z/ntan-gb-1207112-woodland-42-original-imaegnzcuyngfswq.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Woodland, Lee...</span><br>
+                        <span class="text-success p-0">30 - 70% off</span><br>
+                        <span class="text-muted">Causal,Formal shoes</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jv44mfk0/rack-shelf/5/7/2/3-in-1-multi-shelf-wb-7cr-original-imaeuk5rkfjpvhzc.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Mobile Holders...</span><br>
+                        <span class="text-success p-0">From <i class="fas fa-rupee-sign"></i>59 </span><br>
+                        <span class="text-muted">Flipkart Assured</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/832/832/jbgtnrk0/shoe/u/4/g/light-weight-and-fashionable-sports-casual-8-hd-black-original-imafy74whszndygb.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Sparx, Lancer..</span><br>
+                        <span class="text-success p-0">From <i class="fas fa-rupee-sign"></i>199</span><br>
+                        <span class="text-muted">Men's Footwear</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jjubki80/book-shelf/f/g/n/galvanised-steel-sj030405-furn-central-lucky-cherry-original-imaf5wpfxfpa6myb.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">BookShelves </span><br>
+                        <span class="text-success p-0">From <i class="fas fa-rupee-sign"></i>199 </span><br>
+                        <span class="text-muted">Deal of the day</span>
+                     </div>
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/flap/150/150/image/973a70fff3bb0962.jpg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Bike Accessories</span><br>
+                        <span class="text-success p-0">Up to 20% off</span><br>
+                        <span class="text-muted">Top Selling</span>
+                     </div>
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/image/150/150/k4d27ww0/sari/f/s/k/free-new-more-kanjivaram-fashion-anusuya-saree-original-imafgvemre4fcxy6.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Sarees</span><br>
+                        <span class="text-success p-0"> From ₹299</span><br>
+                        <span class="text-muted">Women's Clothing</span>
+                     </div>
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/image/150/150/kj8wccw0-0/t-shirt/f/v/c/m-m7aw20cn012a-m7-by-metronaut-original-imafyuywkdh6evxh.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Metronaut, Billion</span><br>
+                        <span class="text-success p-0">min 60% off</span><br>
+                        <span class="text-muted">Men's Clothing</span>
+                     </div>
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/image/150/150/kqpj4i80/rakhi-set/s/q/q/2-d662-d724-fsb-flipkart-smartbuy-original-imag4nudffg9fjyr.jpeg?q=70"
+                           class="size mb-3 zoom"><br>
+                        <span class="font-weight-bold">Rakhi & Rakhi Sets</span><br>
+                        <span class="text-success p-0">From ₹99</span><br>
+                        <span class="text-muted">Fresh Collections</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-2">
+            <img class="img-fluid img-thumbnail w-100 h-90"
+               src="https://rukminim1.flixcart.com/flap/464/708/image/7326117459d6663c.jpg?q=20">
+               <img class="img-fluid img-thumbnail w-100 h-auto"
+               src="https://rukminim1.flixcart.com/flap/464/708/image/a33323ee3a5b0bc5.jpg?q=70">
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------Three Images----------------------------------------->
+   <div class="container-fluid mt-3 px-5">
+      <div class="row">
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/af2926cf02a3c3c9.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/9581455d64cad13b.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 shadow threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/92b2b7267e3c9cf4.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------Trending Offers-------------------------------------->
+   <div class="container-fluid bg-light px-5">
+      <div class="row text-center my-1">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header d-flex">
+                  <h4>Trending Offers</h4>
+                  <span class="btn btn-primary rounded-0 ml-auto"> <small> VIEW ALL</small></span>
+               </div>
+               <div class="card-body mb-2">
+                  <!-- <div> -->
+                  <div class="row mt-1">
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k3xcdjk0/television/r/5/h/nokia-55cauhdn-original-imafmxw7qfxh6b7a.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold mb-1">Just Launched</span><br>
+                        <span class="text-success mb-1">Explore Now</span><br>
+                        <span class="text-muted">Samsung,Moto..</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jrjizrk0/fan/p/z/r/efficio-energy-saving-5-star-rated-remote-control-and-bldc-motor-original-imafdbhsfg9qkv34.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Power saving fans</span><br>
+                        <span class="text-success">Flat 10% off</span><br>
+                        <span class="text-muted">Orient,usha..</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k251k7k0/television/n/4/z/samsung-qa65q70rakxxl-original-imafhnvzbhyygwyq.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Samsung QLED</span><br>
+                        <span class="text-success">Upto 10% off</span><br>
+                        <span class="text-muted">Brighter Col..</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k0igia80/fan/c/q/n/seawind48lb-ceiling-fan-1200-crompton-original-imafkaggf7zszy3a.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Fans</span><br>
+                        <span class="text-success">Upto 50% off</span><br>
+                        <span class="text-muted">Usha,Gorilla</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jd4u5jk0/mixer-grinder-juicer/h/k/8/prestige-41115-original-imaffff4thqwbq9t.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Juicers</span><br>
+                        <span class="text-success">Upto 50% off</span><br>
+                        <span class="text-muted">Philips & more</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jmp79u80-1/landline-phone/2/m/a/gsm-dual-sim-f1-fix-wireless-phone-corded-cordless-for-original-imaf9jxypsfacxgt.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Landline Phones</span><br>
+                        <span class="text-success">Upto 30% off</span><br>
+                        <span class="text-muted">Best Seller!</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/coffee-maker/b/2/j/philips-hd-7457-20-15-cups-coffee-maker-hd-7457-20-original-imadw64eyczzxggh.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Coffee Makers</span><br>
+                        <span class="text-success">Upto 60% off</span><br>
+                        <span class="text-muted">Philips & more</span>
+                     </div>
+                  </div>
+                  <!-- </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------Three Images---------------------------------------->
+   <div class="container-fluid mt-3 px-5">
+      <div class="row">
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/f247f03b2aa72e5b.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/f4c42aac82771fc9.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 shadow threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/8b5b2554c8abcf53.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------Personal & HealthCare------------------------------->
+   <div class="container-fluid bg-light px-5 mb-2">
+      <div class="row text-center my-1">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header d-flex">
+                  <h4>Personal & Healthcare</h4>
+                  <span class="btn btn-primary rounded-0 ml-auto"> <small> VIEW ALL</small></span>
+               </div>
+               <div class="card-body mb-2">
+                  <!-- <div> -->
+                  <div class="row mt-1">
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/flap/150/150/image/050993a5517eeb9c.jpg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold mb-1">Best of styling</span><br>
+                        <span class="text-success mb-1">Upto 10% off</span><br>
+                        <span class="text-muted">By Nova</span>
+                     </div>
+                     <div class="col my-2">
+                        <img src="https://rukminim1.flixcart.com/flap/150/150/image/54bb9249e2ff3173.jpg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Body Massagers</span><br>
+                        <span class="text-success">Upto 30% off</span><br>
+                        <span class="text-muted">Dr.Physio</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k5si2kw0/massager/h/k/f/dr-physio-massager-machine-massage-machine-powerful-electric-original-imafz9mxwzjyjkqe.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Top Massagers..</span><br>
+                        <span class="text-success">Upto 82% off</span><br>
+                        <span class="text-muted">From Agaro</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/jtuej680/trimmer/a/u/a/mgk3040-braun-original-imaff3rhnxbgwm4v.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Trimmer Set</span><br>
+                        <span class="text-success">Above 4* Rated</span><br>
+                        <span class="text-muted">By Philips</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/k0lbdzk0/electric-toothbrush/h/u/z/colgate-pro-clinical-150-charcoal-1-pc-original-imafkcjsrrrebqcu.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Electric Toothbrush</span><br>
+                        <span class="text-success">Upto 50% off</span><br>
+                        <span class="text-muted">By Oral-B</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/200/200/hair-dryer/k/j/d/remington-d5000-original-imadghfnzqxqgpsv.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Hair Styling</span><br>
+                        <span class="text-success">Above 4* Rated</span><br>
+                        <span class="text-muted">Philips</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/ja73ki80/shoe/s/5/q/pw-tennis-hu-10-adidas-originals-dkblue-dkblue-ftwwht-original-imaezp4nmhbhyz6z.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Adidas Original</span><br>
+                        <span class="text-success">30-60% off</span><br>
+                        <span class="text-muted">Adidas</span>
+                     </div>
+                  </div>
+                  <!-- </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-------------------------------Three Images---------------------------------------->
+   <div class="container-fluid mt-3 px-5">
+      <div class="row">
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/14350e3cddda3144.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/094ddb0b2c0c370c.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+         <div class=" col-md-4 mb-2 shadow border-0">
+            <div class="card text-center border-0 shadow threeimg">
+               <div class="card-body">
+                  <img src="https://rukminim1.flixcart.com/flap/480/480/image/f588dff0326288c9.jpg?q=50"
+                     class="img-fluid">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!------------------------------  Home Decor----------------------------------------->
+   <div class="container-fluid bg-light px-5">
+      <div class="row text-center my-1">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header d-flex">
+                  <h4>Home Decor</h4>
+                  <span class="btn btn-primary rounded-0 ml-auto"> <small> VIEW ALL</small></span>
+               </div>
+               <div class="card-body mb-2">
+                  <!-- <div> -->
+                  <div class="row mt-1">
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/ja73ki80/wall-clock/h/w/4/handpainted-peacock-design-wwc5090-analog-craft-junction-original-imaeztzpekug2zq4.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold mb-1">Wall Clocks</span><br>
+                        <span class="text-success mb-1">Minimum 10% off</span><br>
+                        <span class="text-muted">Super Deal</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/josxlzk0/blanket/b/h/f/double-bed-floral-maroon-blanket-for-winter-1-pc-double-bed-mink-original-imafb6zyxyf96zcp.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Home Furnishing</span><br>
+                        <span class="text-success">Upto 10% off</span><br>
+                        <span class="text-muted">BedSheets & More</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                           src="https://rukminim1.flixcart.com/image/150/150/rack-shelf/t/y/a/sscdr-154-decorhand-original-imaeeg9bqcgnfzr9.jpeg?q=70"
+                           class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Wall Shelves</span><br>
+                        <span class="text-success">Upto 82% off</span><br>
+                        <span class="text-muted">Organise & Store</span>
+                     </div>
+                     <div class="col my-2">
+                        <img
+                        src="https://rukminim1.flixcart.com/image/150/150/jkzrc7k0/curtain/k/f/c/roundrose-7ft-213-roundrose-7ft-eyelet-indian-craft-original-imaf82hypbdekcjq.jpeg?q=70"
+                        class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Wall Curtains</span><br>
+                        <span class="text-success">Curtains & More</span><br>
+                        <span class="text-muted">By Philips</span>
+                  </div>
+                  <div class="col my-2">
+                        <img
+                        src="https://rukminim1.flixcart.com/image/150/150/je8uhe80/sticker/b/y/g/small-3d-magnet-butterflies-multipurpose-decor-12-wtbu328-ampire-original-imaf2yy2q5r3qjqr.jpeg?q=70"
+                        class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Home Decor</span><br>
+                        <span class="text-success">Flat 50% off</span><br>
+                        <span class="text-muted">Stickers</span>
+                  </div>
+                  <div class="col my-2">
+                        <img
+                        src="https://rukminim1.flixcart.com/image/150/150/k0463rk0/bedsheet/c/f/d/double-bedsheet-drl166-flat-metro-living-original-imafjzcpezryzeam.jpeg?q=70"
+                        class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Bedsheet</span><br>
+                        <span class="text-success">Upto 10% off</span><br>
+                        <span class="text-muted">Bombay Dyeing..</span>
+                  </div>
+                  <div class="col my-2">
+                        <img
+                        src="https://rukminim1.flixcart.com/image/200/200/j27w2a80/painting/k/n/u/sal6284-saf-original-imaetmhnbzkvkd28.jpeg?q=70"
+                        class="size1 mb-3 zoom"><br>
+                        <span class="font-weight-bold">Premium Paintings</span><br>
+                        <span class="text-success">30-60% off</span><br>
+                        <span class="text-muted">Wall Decor</span>
+                  </div>
+               </div>
+               <!-- </div> -->
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+   <!--------------------------------Footer--------------------------------------------->
+      <div class="container-fluid bg-dark py-5 mt-2">
+         <div class="row">
+            <div class="col-7">
+            <div class="row">
+               <div class="col-6 col-md-4 col-lg-3 d-flex flex-column mb-2 small pl-3">
+                  <small class="text-warning mb-2">ABOUT</small>
+                  <a href="#" class="text-light">Contact Us</a>
+                  <a href="#" class="text-light">About Us</a>
+                  <a href="#" class="text-light">Careers</a>
+                  <a href="#" class="text-light">Flipkart Stories</a>
+                  <a href="#" class="text-light">Press</a>
+               </div>
+               <div class="col-6 col-md-4 col-lg-3 d-flex flex-column mb-2 small pl-3">
+                  <small class="text-warning mb-2">HELP</small>
+                  <a href="#" class="text-light">Payments</a>
+                  <a href="#" class="text-light">Shipping</a>
+                  <a href="#" class="text-light">Cancellation & Returns</a>
+                  <a href="#" class="text-light">FAQ</a>
+                  <a href="#" class="text-light">Report Infringement</a>
+               </div>
+               <div class="col-6 col-md-4 col-lg-3 d-flex flex-column mb-2 small pl-3">
+                  <small class="text-warning mb-2">POLICY</small>
+                  <a href="#" class="text-light">Return Policy</a>
+                  <a href="#" class="text-light">Terms Of Use</a>
+                  <a href="#" class="text-light">Security</a>
+                  <a href="#" class="text-light">Privacy</a>
+                  <a href="#" class="text-light">Sitemap</a>
+                  <a href="#" class="text-light">EPR Compliance</a>
+               </div>
+               <div class="col-6 col-md-4 col-lg-3 d-flex flex-column mb-2 small pl-3">
+                  <small class="text-warning mb-2">SOCIAL</small>
+                  <a href="#" class="text-light">Facebook</a>
+                  <a href="#" class="text-light">Twitter</a>
+                  <a href="#" class="text-light">YouTube</a>
+               </div>
+            </div>
+            </div>
+            <div class="col-5 ">
+            <div class="row">
+               <div class="col-11 col-md-8 col-lg-6 d-flex flex-column mb-2">
+                  <small class="text-warning mb-2">Mail Us :</small>
+                  <small class="text-light">Flipkart Internet Private Limited,<br>Buildings Alyssa, Begonia &<br>
+                  Clove Embassy Tech Village,<br>Outer Ring Road, Devarabeesanahalli Village,<br>Bengaluru,
+                  560103,<br>
+                  Karnataka, India.</small>
+               </div>
+               <div class="col-11 col-md-8 col-lg-6 d-flex flex-column">
+                  <small class="text-warning mb-2">Registered Office Address :</small>
+                  <small class="text-light">Flipkart Internet Private Limited,<br>Buildings Alyssa, Begonia &<br>
+                        Clove Embassy Tech Village,<br>Outer Ring Road, Devarabeesanahalli,<br>Bengaluru,
+                        560103,<br>
+                        Karnataka, India,<br>CIN : U51109KA2012PT<br>Telephone: 1800 208 9898</small><br>
+               </div>
+            </div>
+            </div>
+      </div>
+   </div>
+
+   <!-------------------------------Footer logos and Payements ------------------------->
+   <div class="container-fluid bg-dark py-3 footerhr">
+      <div class="col-6 flex">
+         <div class="row flex">
+            <div class="col-12 col-md-12 col-lg-4">
+                  <span class="footer-text">
+                  &copy 2021 | Sandeep</span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/f90b59850b.js" crossorigin="anonymous"></script>
+<script src="Registration.js"></script>
+<script src="Login.js"></script>
+
+</body>
+
+</html>

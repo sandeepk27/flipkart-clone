@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/729/PNG/512/flipkart_icon-icons.com_62718.png" type="image/x-icon">
+    <title>loadData</title>
+</head>
+
+<body>
+    <!----------------------------------Navbar------------------------------------------------->
+    <div class="bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdd-qzkVUo0dBoxPSfHqX6f1uOkJfLOcKdExSY-s0PiK3Ox3DY"
+                        class="flipkartImg" alt="flip">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="input-group col-lg-9">
+                        <input type="text" class="form-control rounded-0" placeholder="Search for products,brands and more..."
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text text-primary bg-white rounded-0" id="basic-addon2"><i
+                                    class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav mr-auto ml-3">
+                        <li class="nav-item">
+                            <p id="dispUser" class="text-white mt-2 font-weight-bold"></p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white ml-5" href="#">More</a>
+                        </li>
+                        <li class="nav-item  mt-2 pl-5">
+                            <a href="#"><small class="text-white h5 px-3 d-flex"><i class="fas fa-shopping-cart"></i>
+                                    <span class="px-1">cart</span></small></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!----------------------------------Components--------------------------------------------->
+    <div class="container-fluid">
+        <div class="mt-1 p-0">
+            <ul class="nav justify-content-center text-dark">
+                <li class="nav-item  dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Electronics</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Mobile"> <small
+                                    class="text-dark font-weight-bold">Mobile</small></a><br>
+                            <a href="#"><small class="text-muted"> Mi</small></a><br>
+                            <a href="#"><small class="text-muted">Realme</small></a><br>
+                            <a href="#"><small class="text-muted">Samsung</small></a><br>
+                            <a href="#"><small class="text-muted">Infinix</small> </a><br>
+                            <a href="#"><small class="text-muted">OPPO</small></a><br>
+                            <a href="#"><small class="text-muted">Apple</small></a><br>
+                            <a href="#"><small class="text-muted">Vivo</small></a><br>
+                            <a href="#"><small class="text-muted">Honor</small></a><br>
+                            <a href="#"><small class="text-muted">Asus</small></a><br>
+                            <a href="#"><small class="text-muted">realme 5i</small></a><br>
+                            <a href="#"><small class="text-muted">Samsung S10 Lite</small></a><br>
+                            <a href="#"><small class="text-muted">Redmi 8A</small></a><br>
+                            <a href="#"><small class="text-muted">Redmi 8</small></a><br>
+                            <a href="#"><small class="text-muted">OPPO F15</small></a><br>
+                            <a href="#"><small class="text-muted">Asus ROG Ohone II</small></a>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Speakers"> <small
+                                    class="text-dark font-weight-bold">Speakers</small></a><br>
+                            <a href="#"><small class="text-muted">Home Audio Speakers</small></a><br>
+                            <a href="#"><small class="text-muted">Home Theatres</small></a><br>
+                            <a href="#"><small class="text-muted">Soundbars</small></a><br>
+                            <a href="#"><small class="text-muted">Bluetooth Speakers</small></a><br>
+                            <a href="#"><small class="text-muted">DTH Set Top Box</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Laptops"><small
+                                    class="text-dark font-weight-bold">Laptops</small></a><br>
+                            <a href="#"><small class="text-muted">HP</small></a><br>
+                            <a href="#"> <small class="text-muted">Dell</small></a><br>
+                            <a href="#"> <small class="text-muted">Acer</small></a><br>
+                            <a href="#"><small class="text-muted">Asus</small> </a><br>
+                            <a href="#"> <small class="text-muted">Lenovo</small> </a><br>
+                            <a href="#"><small class="text-muted"> Thoshiba</small></a><br>
+                            <a href="#"> <small class="text-muted">Mac Book</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Tvs &
+                        Appliances</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Televisions"> <small
+                                    class="text-dark font-weight-bold">Televisions</small></a><br>
+                            <a href="#"><small class="text-muted">Mi</small></a><br>
+                            <a href="#"><small class="text-muted">Vu</small></a><br>
+                            <a href="#"><small class="text-muted">Thompson</small></a><br>
+                            <a href="#"><small class="text-muted">Samsung</small></a><br>
+                            <a href="#"><small class="text-muted">LG</small></a><br>
+                            <a href="#"><small class="text-muted">BPL</small></a><br>
+                            <a href="#"><small class="text-muted">Mororola</small></a></br>
+                            <small class="font-weight-bold">Shop by Screen Size</small><br>
+                            <a href="#"> <small class="text-muted">24 & below</small></a><br>
+                            <a href="#"><small class="text-muted">28 - 32</small></a><br>
+                            <a href="#"><small class="text-muted">39 - 43</small></a><br>
+                            <a href="#"><small class="text-muted">28 - 55</small></a><br>
+                            <a href="#"><small class="text-muted">60 & above</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Air Conditions"> <small
+                                    class="text-dark font-weight-bold">Air
+                                    conditions</small></a><br>
+                            <a href="#"><small class="text-muted">Inverter AC</small></a><br>
+                            <a href="#"><small class="text-muted">Split AC</small></a><br>
+                            <a href="#"><small class="text-muted">Window AC</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Washing Machines"><small
+                                    class="text-dark font-weight-bold">Washing
+                                    Machines</small></a><br>
+                            <a href="#"><small class="text-muted">Fully Automatic Front Load</small></a><br>
+                            <a href="#"><small class="text-muted">Semi Automatic Top Load</small></a><br>
+                            <a href="#"><small class="text-muted">Fully Automatic Top Load</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Men</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=FootWear"> <small
+                                    class="text-dark font-weight-bold">FootWear</small></a><br>
+                            <a href="#"><small class="text-muted">Sport Shoes</small></a><br>
+                            <a href="#"><small class="text-muted">Causal Shoes</small></a><br>
+                            <a href="#"><small class="text-muted">Formal Shoes</small></a><br>
+                            <a href="#"><small class="text-muted">Sandals & Floaters</small></a><br>
+                            <a href="#"><small class="text-muted">Flip-Flops</small></a><br>
+                            <a href="#"><small class="text-muted">Loafers</small></a><br>
+                            <a href="#"><small class="text-muted">Boots</small></a></br>
+                            <a href="#"><small class="text-muted">Running Shoes</small></a><br>
+                            <a href="#"><small class="text-muted">Sneakers</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Clothing"> <small
+                                    class="text-dark font-weight-bold">Clothing</small></a><br>
+                            <small class="font-weight-bold">Top Wear</small><br>
+                            <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Kurtas</small></a><br>
+                            <a href="#"><small class="text-muted">Suits</small></a><br>
+                            <a href="#"><small class="text-muted">Blazers</small></a><br>
+                            <small class="font-weight-bold">Bottom Wear</small><br>
+                            <a href="#"><small class="text-muted">Jeans</small></a><br>
+                            <a href="#"><small class="text-muted">Trousers</small></a><br>
+                            <a href="#"><small class="text-muted">Cargos</small></a><br>
+                            <a href="#"><small class="text-muted">Track Pants</small></a><br>
+                            <a href="#"><small class="text-muted">Shorts</small></a><br>
+                            <a href="#"><small class="text-dark font-weight-bold">Ties,Socks & more</small></a><br>
+                            <a href="#"><small class="text-dark font-weight-bold">Kurta,Pyjama & more</small></a><br>
+                            <a href="#"><small class="text-dark font-weight-bold">Fabrics</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Grooming"><small
+                                    class="text-dark font-weight-bold">
+                                    Grooming</small></a><br>
+                            <a href="#"><small class="text-muted">BackPack</small></a><br>
+                            <a href="#"><small class="text-muted">Wallets</small></a><br>
+                            <a href="#"><small class="text-muted">Belts</small></a><br>
+                            <a href="#"><small class="text-muted">Sunglasses</small></a><br>
+                            <a href="#"><small class="text-muted">Frames</small></a><br>
+                            <a href="#"><small class="text-muted">Trimmers</small></a><br>
+                            <a href="#"><small class="text-muted">Shavers</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Women</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Sandals"> <small
+                                    class="text-dark font-weight-bold">Sandals</small></a><br>
+                            <a href="#"><small class="text-muted">Flats</small></a><br>
+                            <a href="#"><small class="text-muted">Heels</small></a><br>
+                            <a href="#"><small class="text-muted">Wedges</small></a><br>
+                            <small class="text-dark font-weight-bold">Shoes</small><br>
+                            <a href="#"><small class="text-muted">Sandals & Floaters</small></a><br>
+                            <a href="#"><small class="text-muted">Flip-Flops</small></a><br>
+                            <a href="#"><small class="text-muted">Loafers</small></a><br>
+                            <a href="#"><small class="text-muted">Boots</small></a></br>
+                            <a href="#"><small class="text-muted">Running Shoes</small></a><br>
+                            <a href="#"><small class="text-muted">Sneakers</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Accessories"> <small
+                                    class="text-dark font-weight-bold">Accessories</small></a><br>
+                            <a href="#"><small class="text-muted">Handbags</small></a><br>
+                            <a href="#"><small class="text-muted">Shoulder bags</small></a><br>
+                            <a href="#"><small class="text-muted">Totes</small></a></br>
+                            <a href="#"><small class="text-muted">Sling bags</small></a><br>
+                            <a href="#"><small class="text-muted">Clutches</small></a><br>
+                            <a href="#"><small class="text-muted">Wallets</small></a><br>
+                            <a href="#"><small class="text-muted">Sunglases</small></a></br>
+                            <a href="#"><small class="text-muted">Frames</small></a><br>
+                            <a href="#"><small class="text-muted">Belts</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Party Wear"><small
+                                    class="text-dark font-weight-bold">Clothing</small></a><br>
+                            <a href="#"><small class="text-muted">Swetters</small></a><br>
+                            <a href="#"><small class="text-muted">Pull overs</small></a><br>
+                            <a href="#"><small class="text-muted">SweatShirts</small></a></br>
+                            <a href="#"><small class="text-muted">Jackets</small></a><br>
+                            <a href="#"><small class="text-muted">Cardigans</small></a><br>
+                            <a href="#"><small class="text-muted">Shrings</small></a><br>
+                            <a href="#"><small class="text-muted">Coat</small></a></br>
+                            <a href="#"><small class="text-muted">Blazzers</small></a><br>
+                            <small class="font-weight-bold">Winter Wear</small><br>
+                            <a href="#"><small class="text-muted">Jeans</small></a><br>
+                            <a href="#"><small class="text-muted">Cardigans</small></a><br>
+                            <a href="#"><small class="text-muted">Shrings</small></a><br>
+                            <a href="#"><small class="text-muted">Coat</small></a></br>
+                            <a href="#"><small class="text-muted">Blazzers</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Baby &
+                        kids</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Kid's Clothing"> <small
+                                    class="text-dark font-weight-bold">Kid's
+                                    Clothing</small></a><br>
+                            <small class="font-weight-bold">Boy's Clothing</small><br>
+                            <a href="#"><small class="text-muted">Polo's & T-shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Ethnic wear</small></a><br>
+                            <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Shorts</small></a></br>
+                            <a href="#"><small class="text-muted">3/4 ths</small></a><br>
+                            <small class="font-weight-bold">Girl's Clothing</small><br>
+                            <a href="#"><small class="text-muted">Polo's & T-shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Ethnic wear</small></a><br>
+                            <a href="#"><small class="text-muted">T-shirts</small></a><br>
+                            <a href="#"><small class="text-muted">Shorts</small></a></br>
+                            <a href="#"><small class="text-muted">3/4 ths</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Baby care"> <small class="text-dark font-weight-bold">Baby
+                                    care</small></a><br>
+                            <a href="#"><small class="text-muted">Diapers</small></a><br>
+                            <a href="#"><small class="text-muted">Wipes</small></a><br>
+                            <a href="#"><small class="text-muted">Baby Grooming</small></a><br>
+                            <a href="#"><small class="text-muted">Baby Food</small></a></br>
+                            <a href="#"><small class="text-muted">Baby Bedding</small></a><br>
+                            <a href="#"><small class="text-muted">Baby proofing</small></a><br>
+                            <a href="#"><small class="text-muted">Baby Powder</small></a><br>
+                            <a href="#"><small class="text-muted">Baby Soaps</small></a><br>
+                            <a href="#"><small class="text-muted">Baby oral care</small></a></br>
+                            <a href="#"><small class="text-muted">Feeding Bottle</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Toys"><small
+                                    class="text-dark font-weight-bold">Toys</small></a><br>
+                            <a href="#"><small class="text-muted">Remote control toys</small></a><br>
+                            <a href="#"><small class="text-muted">Eductional toys</small></a><br>
+                            <a href="#"><small class="text-muted">Soft toys</small></a></br>
+                            <a href="#"><small class="text-muted">Outdoor Toys</small></a><br>
+                            <a href="#"><small class="text-muted">Puzzles</small></a><br>
+                            <a href="#"><small class="text-muted">Toy Guns</small></a><br>
+                            <a href="#"><small class="text-muted">Perty Supplies</small></a><br>
+                            <a href="#"><small class="text-muted">Drones</small></a></br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Home &
+                        Furniture</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Bed Room Furniture"> <small
+                                    class="text-dark font-weight-bold">Bed
+                                    Room Furniture</small></a><br>
+                            <a href="#"><small class="text-muted">Beds</small></a><br>
+                            <a href="#"><small class="text-muted">Mattresses</small></a><br>
+                            <a href="#"><small class="text-muted">Wardrobes</small></a><br>
+                            <small class="font-weight-bold">Furnishing</small><br>
+                            <a href="#"><small class="text-muted">Bedsheets</small></a></br>
+                            <a href="#"><small class="text-muted">Curtains</small></a><br>
+                            <a href="#"><small class="text-muted">Blankets</small></a><br>
+                            <a href="#"><small class="text-muted">Bath Towels</small></a><br>
+                            <a href="#"><small class="text-muted">Floor Coverings</small></a><br>
+                            <a href="#"><small class="text-muted">Bath Towels</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Living Room Furniture"> <small
+                                    class="text-dark font-weight-bold">Living
+                                    Room Furniture</small></a><br>
+                            <a href="#"><small class="text-muted">Sofa</small></a></br>
+                            <a href="#"><small class="text-muted">Sofa Beds</small></a><br>
+                            <a href="#"><small class="text-muted">TV Units</small></a><br>
+                            <a href="#"><small class="text-muted">Coffee Tables</small></a><br>
+                            <a href="#"><small class="text-muted">Shoe Racks</small></a><br>
+                            <a href="#"><small class="text-muted">Dining Tables</small></a><br>
+                            <a href="#"><small class="text-muted">Dining Chairs</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active text-dark font-weight-bold dropbtn" href="#">Sports,
+                        Books & More</a>
+                    <div class="dropdown-content p-0">
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Books"> <small
+                                    class="text-dark font-weight-bold">Books</small></a><br>
+                            <a href="#"><small class="text-muted">Entrance Exams</small></a></br>
+                            <a href="#"><small class="text-muted">Academics</small></a><br>
+                            <a href="#"><small class="text-muted">Literature</small></a><br>
+                            <a href="#"><small class="text-muted">Fiction</small></a><br>
+                            <a href="#"><small class="text-muted">Non Fiction</small></a><br>
+                            <a href="#"><small class="text-muted">Young Readers</small></a><br>
+                            <a href="#"><small class="text-muted">Self-Help</small></a><br>
+                            <a href="#"><small class="text-muted">Business</small></a><br>
+                            <a href="#"><small class="text-muted">Preorders</small></a><br>
+                            <a href="#"><small class="text-muted">Languages</small></a><br>
+                        </span>
+                        <span class="float-left px-4">
+                            <a href="loaddata.html?product=Sports"> <small
+                                    class="text-dark font-weight-bold">Sports</small></a><br>
+                            <a href="#"><small class="text-muted">Cricket</small></a><br>
+                            <a href="#"><small class="text-muted">Badminton</small></a><br>
+                            <a href="#"><small class="text-muted">Cycling</small></a><br>
+                            <a href="#"><small class="text-muted">Football</small></a><br>
+                            <a href="#"><small class="text-muted">Skating</small></a><br>
+                            <a href="#"><small class="text-muted">Camping</small></a><br>
+                            <a href="#"><small class="text-muted">Hiking</small></a><br>
+                            <a href="#"><small class="text-muted">Swimming</small></a><br>
+                        </span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="file:///home/chaitanya/projects/masai/flipkart/addproducts.html"
+                        class="nav-link text-dark font-weight-bold">Add
+                        Product <span> <i class="fas fa-plus-circle"></i></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+    <!---------------------------------Sorting based on Ite Price----------------------------->
+    <div class="container col-8 col-mg-6 col-lg-3 mb-2">
+        <select id="sortPrice" class="form-control">
+            <option value="--">-- Apply Sort --</option>
+            <option value="asc">Ascending</option>
+            <option value="dec">Descending</option>
+        </select>
+    </div>
+
+    <!----------------------------------Append the products Here----------------------------->
+    <div id="out"></div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f90b59850b.js" crossorigin="anonymous"></script>
+    <script src="loaddata.js"></script>
+</body>
+
+</html>

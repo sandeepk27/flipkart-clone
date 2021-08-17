@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+.flipkartImg {
+    height: 45px;
+    width: 80px;
+}
+
+.font {
+    font-size: 8px;
+}
+
+.size {
+    height: 160px;
+    width: 150px;
+}
+
+.size1 {
+    height: 130px;
+    width: 140px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 450px;
+    height: 385px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.threeimg {
+    background: rgb(241, 243, 246);
+}
+
+a.carousel-control-next {
+    background: white;
+    width: 40px;
+    height: 110px;
+    margin-top: 50px;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+a.carousel-control-prev {
+    background: white;
+    width: 40px;
+    height: 110px;
+    margin-top: 50px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='010101' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='010101' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.footerhr {
+    border-top: 1px solid grey;
+}
+
+.footer-text {
+    display: flex;
+    color: #f9f9f9;
+    font-weight: bold;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin-left: 550px;
+}
